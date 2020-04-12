@@ -10,10 +10,10 @@
   </ol>
 
   <div class="row mb-4">
-    <div class="col-md">
+    <div class="col-md-9">
       <h1 class="h2 border-left pl-2">{{pageTile}}</h1>
     </div>
-    <div class="col-md">
+    <div class="col-md-3">
       <a routerLink="/categories" class="btn btn-light float-right">
         << Voltar</a>
     </div>
@@ -44,7 +44,7 @@
     <div class="alert alert-danger mt-4" *ngIf="serverErrorMessages">
       <strong>Erro no servidor:</strong>
       <ul>
-        <li *ngIf="let error of serverErrorMessages">{{error}</li>
+        <li *ngFor="let error of serverErrorMessages">{{error}</li>
       </ul>
     </div>
 
